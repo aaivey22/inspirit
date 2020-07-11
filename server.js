@@ -10,7 +10,7 @@ app.use("/", express.static(_dirname + "/build"));
 app.get("/", (req, res) => res.sendFile(_dirname + "/build/index.html"));
 
 mongoose.connect(
-    process.env.MONGODB_URL || "mongodb://localhost/app-db", {
+    process.env.MONGODB_URL || "mongodb://localhost/inspirit-db", {
         useNewUrlParser: true,
         useCreateIndex: true,
         useUnifiedTopology: true,  
