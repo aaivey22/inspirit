@@ -6,8 +6,8 @@ const shortid = require("shortid");
 const app = express();
 app.use(bodyParser.json());
 
-app.use("/", express.static(_dirname + "/build"));
-app.get("/", (req, res) => res.sendFile(_dirname + "/build/index.html"));
+app.use("/", express.static(__dirname + "/build"));
+app.get("/", (req, res) => res.sendFile(__dirname + "/build/index.html"));
 
 mongoose.connect(
     process.env.MONGODB_URL || "mongodb://localhost/inspirit-db", {
